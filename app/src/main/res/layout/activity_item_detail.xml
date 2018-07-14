@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.udacity.mybakingapp.ItemDetailActivity"
-    tools:ignore="MergeRootFrame">
+    tools:ignore="MergeRootFrame"
+    android:background="@color/appBackground">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"

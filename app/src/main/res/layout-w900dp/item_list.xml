@@ -21,18 +21,18 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/item_list"
         android:name="com.udacity.mybakingapp.ItemListFragment"
-        android:layout_width="@dimen/item_width"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         app:layoutManager="LinearLayoutManager"
         tools:context="com.udacity.mybakingapp.ItemListActivity"
-        tools:listitem="@layout/item_list_content" />
+        tools:listitem="@layout/baking_list_item" />
 
     <FrameLayout
         android:id="@+id/item_detail_container"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="3" />
+        android:layout_weight="0" />
 
 </LinearLayout>

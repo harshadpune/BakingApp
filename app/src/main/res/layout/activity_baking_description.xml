@@ -1,34 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/appBackground">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <VideoView
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
         android:id="@+id/vvPlayer"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"/>
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="@dimen/margin_24_dp"
+        android:layout_centerHorizontal="true"/>
 
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvRecipeStep"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_24_dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/margin_24_dp"
+        android:layout_marginRight="@dimen/margin_24_dp"
+        android:padding="@dimen/margin_16_dp"
+        android:layout_below="@id/vvPlayer"
+        app:cardCornerRadius="12dp">
     <LinearLayout
         android:id="@+id/llDescriptionContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/vvPlayer">
+        android:visibility="visible"
+        android:padding="@dimen/margin_24_dp">
+
         <TextView
             android:id="@+id/tvStepDescription"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            style="@style/TextViewStyle"/>
     </LinearLayout>
 
+    </android.support.v7.widget.CardView>
+
     <LinearLayout
+        android:id="@+id/llNavigationBar"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_below="@id/llDescriptionContainer">
+        android:layout_below="@id/cvRecipeStep"
+        android:layout_marginTop="@dimen/margin_16_dp"
+        android:visibility="visible">
         // Slider buttons
     </LinearLayout>
 

@@ -6,6 +6,7 @@
     android:name="com.udacity.mybakingapp.ItemListFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/appBackground"
     app:layoutManager="LinearLayoutManager"
     tools:context="com.udacity.mybakingapp.ItemListActivity"
     tools:listitem="@layout/baking_list_item" />
