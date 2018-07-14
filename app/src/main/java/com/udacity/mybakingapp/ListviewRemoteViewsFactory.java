@@ -28,8 +28,6 @@ class ListviewRemoteViewsFactory implements RemoteViewsService.RemoteViewsFactor
 
     private final Context context;
     private final Intent intent;
-//    private static List<BakingDataList> bakingDataLists = new ArrayList<BakingDataList>();
-//    private static List<BakingDataList> bakingDataLists;
     private static String[] bakingDataLists;
 
 
@@ -38,16 +36,6 @@ class ListviewRemoteViewsFactory implements RemoteViewsService.RemoteViewsFactor
         this.context = applicationContext;
         this.intent = intent;
         bakingDataLists = intent.getStringArrayExtra("SomeKey");
-//        bakingDataLists = (List<BakingDataList>) intent.getSerializableExtra("SomeKey");
-       /* BakingDataList bakingDataList = new BakingDataList();
-        bakingDataList.name = "test";
-        BakingDataList bakingDataList2 = new BakingDataList();
-        bakingDataList2.name = "test2";
-        BakingDataList bakingDataList3 = new BakingDataList();
-        bakingDataList3.name = ""+intent.getStringExtra("TryIt");
-        bakingDataLists.add(bakingDataList);
-        bakingDataLists.add(bakingDataList2);
-        bakingDataLists.add(bakingDataList3);*/
     }
 
     @Override
@@ -82,7 +70,6 @@ class ListviewRemoteViewsFactory implements RemoteViewsService.RemoteViewsFactor
     public RemoteViews getViewAt(int position) {
         Log.d("TAG", "------------ GetViewAt ");
         RemoteViews rv = new RemoteViews(context.getPackageName(), R.layout.baking_widget_item);
-//        String data =  bakingDataLists.get(position).name;
         String data =  bakingDataLists[position];
         rv.setTextViewText(R.id.tvWidgetItem, data) ;
         return rv;
