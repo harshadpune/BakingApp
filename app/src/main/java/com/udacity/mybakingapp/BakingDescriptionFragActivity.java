@@ -47,7 +47,6 @@ public class BakingDescriptionFragActivity extends FragmentActivity implements V
             case R.id.ivLeftArrow:
                 if(position != 0) {
                     position = position-1;
-//                    Toast.makeText(this, "Previous Page", Toast.LENGTH_SHORT).show();
                     activityBakingViewPagerBinding.pager.setCurrentItem(position);
                     activityBakingViewPagerBinding.tvCounter.setText((position+1)+"/"+bakingDataList.steps.size());
                 }
@@ -56,7 +55,6 @@ public class BakingDescriptionFragActivity extends FragmentActivity implements V
             case R.id.ivRightArrow:
                 if(position+1 < bakingDataList.steps.size()) {
                     position = position+1;
-//                    Toast.makeText(this, "Next Page", Toast.LENGTH_SHORT).show();
                     activityBakingViewPagerBinding.pager.setCurrentItem(position);
                     activityBakingViewPagerBinding.tvCounter.setText((position+1)+"/"+bakingDataList.steps.size());
                 }
@@ -91,6 +89,8 @@ public class BakingDescriptionFragActivity extends FragmentActivity implements V
             BakingDescriptionFragment bakingDescriptionFragment = new BakingDescriptionFragment();
             Bundle bundle = new Bundle();
             bundle.putSerializable(AppConstants.SELECTED_RECIPE, bakingDataList.steps.get(position));
+            if(BakingDescriptionFragActivity.this.position == position)
+            bundle.putBoolean(AppConstants.START_VIDEO, true);
             bakingDescriptionFragment.setArguments(bundle);
             return bakingDescriptionFragment;
         }

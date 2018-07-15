@@ -3,13 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
     android:baselineAligned="false"
     android:divider="?android:attr/dividerHorizontal"
     android:orientation="horizontal"
     android:showDividers="middle"
-    tools:context="com.udacity.mybakingapp.ItemListActivity">
+    tools:context="com.udacity.mybakingapp.BakingHomeActivity"
+    android:background="@color/appBackground">
 
     <!--
     This layout is a two-pane layout for the Items
@@ -26,7 +25,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         app:layoutManager="LinearLayoutManager"
-        tools:context="com.udacity.mybakingapp.ItemListActivity"
+        tools:context="com.udacity.mybakingapp.BakingHomeActivity"
         tools:listitem="@layout/baking_list_item" />
 
     <FrameLayout

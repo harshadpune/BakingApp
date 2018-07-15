@@ -1,6 +1,5 @@
 package com.udacity.mybakingapp;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -73,6 +72,7 @@ class BakingStepsAdapter extends RecyclerView.Adapter<BakingStepsAdapter.ViewHol
                 Intent bakingDetailsFragActivity = new Intent(mParentActivity, BakingDescriptionFragActivity.class);
                 bakingDetailsFragActivity.putExtra(AppConstants.SELECTED_RECIPE, bakingDataList);
                 bakingDetailsFragActivity.putExtra(AppConstants.SELECTED_POSITION, getAdapterPosition());
+//                bakingDetailsFragActivity.putExtra(AppConstants.START_VIDEO, true);
                 mParentActivity.startActivity(bakingDetailsFragActivity);
             }
         }

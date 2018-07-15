@@ -1,4 +1,4 @@
-package com.udacity.mybakingapp;
+package com.udacity.mybakingapp.widget;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -7,9 +7,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.RemoteViews;
+
+import com.udacity.mybakingapp.R;
 import com.udacity.mybakingapp.network.BakingDataList;
 import com.udacity.mybakingapp.network.RetrofitAPIClient;
 import com.udacity.mybakingapp.network.RetrofitAPIInterface;
