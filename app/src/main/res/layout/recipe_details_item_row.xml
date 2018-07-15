@@ -11,7 +11,7 @@
     android:layout_height="match_parent"
     tools:text="Recipie Ingredient and Steps"
     android:textSize="@dimen/text_size_16_sp"
-    android:layout_margin="10dp"
+    android:layout_margin="@dimen/margin_10_dp"
     style="@style/TextViewStyle"/>
 
 </LinearLayout>

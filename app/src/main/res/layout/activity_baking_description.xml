@@ -13,14 +13,14 @@
     <com.google.android.exoplayer2.ui.SimpleExoPlayerView
         android:id="@+id/vvPlayer"
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
+        android:layout_height="@dimen/height_300_dp"
         android:layout_marginTop="@dimen/margin_24_dp"
         android:layout_centerHorizontal="true"/>
 
     <ImageView
         android:id="@+id/ivPlaceHolder"
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
+        android:layout_height="@dimen/height_300_dp"
         android:src="@drawable/bread"
         android:layout_marginTop="@dimen/margin_24_dp"
         android:layout_centerHorizontal="true"
@@ -36,7 +36,7 @@
         android:layout_marginRight="@dimen/margin_24_dp"
         android:padding="@dimen/margin_16_dp"
         android:layout_below="@id/vvPlayer"
-        app:cardCornerRadius="12dp">
+        app:cardCornerRadius="@dimen/card_radius_12_dp">
     <LinearLayout
         android:id="@+id/llDescriptionContainer"
         android:layout_width="match_parent"
@@ -57,7 +57,7 @@
         android:id="@+id/llNavigationBar"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/height_40_dp"
         android:layout_below="@id/cvRecipeStep"
         android:layout_marginTop="@dimen/margin_16_dp"
         android:visibility="visible">
